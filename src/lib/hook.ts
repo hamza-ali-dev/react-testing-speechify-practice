@@ -21,8 +21,18 @@ export function getElementBounds(elem: HTMLElement) {
  */
 export function isPointInsideElement(
   coordinate: { x: number; y: number },
-  element: HTMLElement
-): boolean {}
+  element: HTMLElement,
+): boolean {
+  const bounds = element.getBoundingClientRect();
+  const { x, y } = coordinate;
+
+  return (
+    x >= bounds.left &&
+    x <= bounds.right &&
+    y >= bounds.top &&
+    y <= bounds.bottom
+  );
+}
 
 /**
  * **TBD:** Implement a function that returns the height of the first line of text in an element
