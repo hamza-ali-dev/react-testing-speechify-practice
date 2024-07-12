@@ -38,7 +38,12 @@ export function isPointInsideElement(
  * **TBD:** Implement a function that returns the height of the first line of text in an element
  * We will later use this to size the HTML element that contains the hover player
  */
-export function getLineHeightOfFirstLine(element: HTMLElement): number {}
+export function getLineHeightOfFirstLine(element: HTMLElement): number {
+  const computedStyle: CSSStyleDeclaration = window.getComputedStyle(element);
+  const height: string = computedStyle.lineHeight;
+
+  return parseFloat(height);
+}
 
 export type HoveredElementInfo = {
   element: HTMLElement;
