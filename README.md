@@ -21,7 +21,7 @@ Check out this demo video of a working prototype example of the final result:
 
 ### Implementation Checklist
 
-- [ ] **getTopLevelReadableElements:** Implement a parsing mechanism that gets all the top level readable elements based on heuristics provided. (`./src/lib/parser.ts`)
+- [x] **getTopLevelReadableElements:** Implement a parsing mechanism that gets all the top level readable elements based on heuristics provided. (`./src/lib/parser.ts`)
 - [ ] **useHoveredParagraphCoordinate:** Implement functions and hook that lets you get information about the currently hovered element. (`./src/lib/hook.ts`)
 - [ ] **UI:** Implement hover player react component. (`./src/lib/HoverPlayer.tsx`). For playback, utilise the `speechify` function in ./src/lib/play.ts
 - [ ] **A working prototype of Hover Player feature**: The final result should be a working prototype of the Hover Player feature, where hovering over a paragraph should show a play button. Clicking on this button should start playback. You can utilize the built-in `speechify` function on the `play.ts` file to help you with this.
